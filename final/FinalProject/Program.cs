@@ -18,7 +18,7 @@ class Program
             Console.WriteLine("Welcome to your Work Out Project Journal");
             Console.WriteLine();
             Console.WriteLine("Create a Project and Record the events of that project to keep track of how you are doing and what needs to be done");
-            Console.WriteLine("You can create a project to Enroll in the gym, or to schedule a time to ork out everyday. You can also keep track of how much you weight.");
+            Console.WriteLine("You can create a project to Enroll in the gym, or to schedule a time to work out everyday. You can also keep track of how much you weight.");
 
 
             Console.WriteLine("Choices:");
@@ -151,4 +151,5 @@ class Program
         }
     }
 }
+
 

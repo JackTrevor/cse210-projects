@@ -56,13 +56,15 @@ public class SaveAndLoad
         _fileName = Console.ReadLine();
 
         string[] projects = System.IO.File.ReadAllLines(_fileName);
+        
 
         totalPoints = int.Parse(projects[0]);
 
         foreach (string project in projects)
         {
+            
             string[] parts = project.Split(":"); 
-            if (parts[0] == "One Time") 
+            if (parts[0] == "One Time Project") 
             {
                 string[] lines = parts[1].Split("|"); 
                 OneTimeProject onetime = new OneTimeProject(lines[0], lines[1], int.Parse(lines[2]), bool.Parse(lines[3]));
@@ -76,14 +78,14 @@ public class SaveAndLoad
                 projectss.Add(longtime);
             }
 
-            else if (parts[0] == "Achiving Project") 
+            else if (parts[0] == "Repetitive Project") 
             {
                 string[] lines = parts[1].Split("|"); 
                 RepetitiveProject checklist = new RepetitiveProject(lines[0], lines[1], int.Parse(lines[2]), int.Parse(lines[3]), int.Parse(lines[4]), int.Parse(lines[5]));
                 projectss.Add(checklist);
             }
 
-            else if (parts[0] == "OverAchiving Project") 
+            else if (parts[0] == "Overachiving Project") 
             {
                 string[] lines = parts[1].Split("|"); 
                 OverAchivingProject improve = new OverAchivingProject(lines[0], lines[1], int.Parse(lines[2]), bool.Parse(lines[3]));
@@ -92,4 +94,5 @@ public class SaveAndLoad
         }
     }
 }
+
 

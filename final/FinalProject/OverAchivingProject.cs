@@ -9,22 +9,22 @@ public class OverAchivingProject : Project
  
     public OverAchivingProject()
     {
-        _projectType = "Improvement Goal";
-        Console.Write("What is the name of your goal? ");
+        _projectType = "Overarchiving Project";
+        Console.Write("What is the name of your project? ");
         _projectName = Console.ReadLine();
         Console.WriteLine();
 
-        Console.Write("What is a short description of something you want to improve on? ");
+        Console.Write("What is a short description of this project? ");
         _projectDescription = Console.ReadLine();
         Console.WriteLine();
 
-        Console.Write("What is the amount of points associated with this goal? ");
+        Console.Write("What is the amount of points associated with this project? ");
         _projectPoints = int.Parse(Console.ReadLine());
     }
 
     public OverAchivingProject (string projectName, string projectDescription, int projectPoints, bool complete) : base(projectName, projectDescription, projectPoints)
     {
-        _projectType = "Overachieving Goal";
+        _projectType = "Overachieving Project";
         _isComplete = complete;
     }
 
@@ -42,4 +42,5 @@ public class OverAchivingProject : Project
         return _projectPoints;
     }
 }
+
 
